@@ -12,16 +12,14 @@ public class App {
     final static ArrayList<Integer> zahlenListe = new ArrayList<>();
     final static Quersumme element = new Quersumme(buchstabenListe, zahlenListe);
 
-
     final static Speicher storage = new Speicher(speicher, N);
 
-
     public static void main(String [ ] args) {
-        storage.save("Graz", "0316");
-        storage.save("Dornbrin", "05572");
+        storage.loadOrSave("Graz", "02264", false);
+        storage.loadOrSave("Dornbrin", "05572", false);
 
-        storage.load("Graz");
-        storage.load("Dornbrin");
+        storage.loadOrSave("Graz", "", true);
+        storage.loadOrSave("Dornbrin", "", true);
         //storage.load("Graz");
     }
 
